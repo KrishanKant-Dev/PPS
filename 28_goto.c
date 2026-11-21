@@ -2,17 +2,15 @@
 
 int main()
 {
-    int num = 1;
+    int i;
 
-    if (num == 1)
+    for(i = 1; i<=5; i++)
     {
-        goto positive;
+        if(i == 3)
+            goto meow;
+        printf("%d ",i);
     }
-
-    printf("This statement is skipped");
-
-positive:
-    printf("Number is one");
-
+    meow:
+        printf("Exited");
     return 0;
 }
