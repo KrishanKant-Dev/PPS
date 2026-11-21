@@ -2,17 +2,14 @@
 
 int main()
 {
-    int age = 20;
-    int isStudent = 1;
+    int age;
 
-    if (age >= 60 || isStudent == 1)
-    {
-        printf("Discount available");
-    }
+    printf("Enter the age: ");
+    scanf("%d",&age);
+
+    if(age < 18 || age>60)
+        printf("You can't be Employed");
     else
-    {
-        printf("No discount");
-    }
-
+        printf("You are Employable");
     return 0;
 }
