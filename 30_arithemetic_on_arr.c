@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int numbers[5] = {10, 20, 30, 40, 50};
+    int i, sum = 0;
+    float average;
+
+    for (i = 0; i < 5; i++)
+    {
+        sum = sum + numbers[i];
+    }
+
+    average = sum / 5.0;
+
+    printf("Sum = %d\n", sum);
+    printf("Average = %.2f", average);
+
+    return 0;
+}
