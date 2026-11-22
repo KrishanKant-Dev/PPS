@@ -1,24 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 
-union Data
-{
-    int i;
-    float f;
-    char ch;
+union student{
+    int rollno;
+    char name[50];
+    float marks;
 };
 
 int main()
 {
-    union Data d;
+    union student s1;
 
-    d.i = 10;
-    printf("Integer = %d\n", d.i);
+    s1.rollno = 23;
+    printf("Roll no: %d",s1.rollno);
 
-    d.f = 5.5;
-    printf("Float = %.2f\n", d.f);
+    strcpy(s1.name,"Rohan");
+    printf("\nName: %s",s1.name);
 
-    d.ch = 'A';
-    printf("Character = %c\n", d.ch);
+    s1.marks = 46;
+    printf("\nMarks: %.2f",s1.marks);
 
+    
     return 0;
 }
