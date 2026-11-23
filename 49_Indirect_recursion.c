@@ -1,30 +1,30 @@
 #include <stdio.h>
 
-void funB(int n);
-
-void funA(int n)
+void pong(int);
+void ping(int n)
 {
-    if (n > 0)
-    {
-        printf("%d ", n);
-
-        funB(n - 1);
-    }
+  if(n>0)
+  {
+    printf("Ping ");
+    n--;
+    pong(n);
+  }
 }
 
-void funB(int n)
+void pong(int n)
 {
-    if (n > 1)
-    {
-        printf("%d ", n);
-
-        funA(n / 2);
-    }
+  if(n>0)
+  {
+    printf("Pong ");
+    n--;
+    ping(n);
+  }
 }
 
 int main()
 {
-    funA(10);
+  int n = 4;
+  ping(n);
 
-    return 0;
+  return 0;
 }
